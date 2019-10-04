@@ -1,0 +1,38 @@
+h1{
+    color: rgb(187, 255, 0);
+}
+
+.bg-image{
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/river-waterfall-pixabay.jpg');
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+p{
+    color:black;
+    font-size: 15px;
+
+
+}
+.one,.two,.three{
+    text-align: center;
+
+}
+.two{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.three{
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+.one{
+    position: absolute;
+    top: 0;
+    left: 16px;
+}

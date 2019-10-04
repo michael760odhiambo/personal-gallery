@@ -1,0 +1,26 @@
+
+
+{%extends 'all_photos/base.html'%}
+
+{% block content %}
+{{block.super}}
+
+    <div class="bg-image">
+        <div class="one">
+            <p>Photography is life</p>
+
+        </div>
+        <div class="two">
+                <h1>Hi everyone welcome to mike's personal gallery 3</h1>
+                <hr>
+                <p>Photos for {{date|date:"l d-F Y"}}</p>
+                <button class="btn btn-success">view</button>
+        </div>
+        <div class="three">
+            <p>OneTimeGallery.com</p>
+
+        </div>
+    </div>
+
+
+{% endblock %}
