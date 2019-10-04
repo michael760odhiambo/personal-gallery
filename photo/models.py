@@ -1,9 +1,7 @@
 from django.db import models
-from django.contrib.gis.db import models
-#from django.urls import 
 
 class Location(models.Model):
-    place = models.PointField()
+    place = models.CharField(max_length=255)
     address = models.CharField(max_length=40)
     city = models.CharField(max_length=40)   
 
@@ -31,11 +29,13 @@ class Image(models.Model):
     name = models.CharField(max_length=40)
     description = models.TextField(max_length=500)
     post_date = models.DateTimeField(auto_now_add=True)
-    location = models.ForeignKey(Location, default='ngong lane plaza')
+    location = models.ForeignKey(Location, default='')
     category = models.ForeignKey(Category, default='')
 
     def __str__(self):
         return {self.name}
 
+    def save_image(self):
+        self.save()
 
 # Create your models here.

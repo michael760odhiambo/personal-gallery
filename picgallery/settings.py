@@ -64,7 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'jango.template.context_processors.media',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -78,10 +78,11 @@ WSGI_APPLICATION = 'picgallery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'galo',
         'USER':'moringa',
         'PASSWORD':'mike1234'
+
     }
 }
 
