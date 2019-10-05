@@ -7,7 +7,7 @@ def home(request):
 
 def photo_of_day(request):
     date = dt.date.today()
-    day = convert_dates(date)
+   # day = convert_dates(date)
 
  
     return render(request,'all_photos/today-photos.html',{'date':date})

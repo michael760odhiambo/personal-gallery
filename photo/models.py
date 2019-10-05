@@ -8,6 +8,10 @@ class Location(models.Model):
     def __str__(self):
         return {self.place}
 
+    def save_location(self):
+        self.save()
+
+
 
 class Category(models.Model):
     created_at = models.CharField(max_length=30, verbose_name='Created At')
@@ -23,6 +27,10 @@ class Category(models.Model):
         ('city','Cities')
     )
     group = models.CharField(max_length=1, choices=PHOTO_CHOICE)
+
+    def save_location(self):
+        self.save()
+
 
 class Image(models.Model):
     image = models.ImageField(upload_to='media/', default='media/image.jpg')
