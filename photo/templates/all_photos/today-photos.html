@@ -7,7 +7,7 @@
             <h1>Hi everyone welcome to mike's personal gallery today</h1>
         <div class="row">
             <div class="col-md 4">
-                <img src="https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758__340.jpg" height="280px" width="350px" onclick="myFunction(this);">
+               <a href="{% url 'home' %}"><img src="https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758__340.jpg" height="280px" width="350px" onclick="myFunction(this);"></a>
                 <img src="https://cdn.pixabay.com/photo/2018/02/26/05/21/waterfall-3182326_960_720.jpg" height="280px" width="350px" onclick="myFunction(this);">
                 <img src="https://cache-graphicslib.viator.com/graphicslib/page-images/742x525/176239_Viator_Shutterstock_140587.jpg" height="280px" width="350px" onclick="myFunction(this);">
                 
@@ -23,6 +23,20 @@
                 <img src="https://cache-graphicslib.viator.com/graphicslib/page-images/742x525/176239_Viator_Shutterstock_140587.jpg" height="280px" width="350px" onclick="myFunction(this);">
             </div>
         </div>
+
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
     </div>
+
+    <script>
+            function myFunction(imgs) {
+              var expandImg = document.getElementById("expandedImg");
+              var imgText = document.getElementById("imgtext");
+              expandImg.src = imgs.src;
+              imgText.innerHTML = imgs.alt;
+              expandImg.parentElement.style.display = "block";
+            }
+            </script>
 
 {% endblock %}
