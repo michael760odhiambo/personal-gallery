@@ -16,6 +16,11 @@ p{
 
 
 }
+h2{
+    text-align: center;
+    font-style: italic;
+    color: green;
+}
 .one,.two,.three{
     text-align: center;
 

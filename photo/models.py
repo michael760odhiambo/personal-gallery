@@ -28,7 +28,10 @@ class Category(models.Model):
     )
     group = models.CharField(max_length=1, choices=PHOTO_CHOICE)
 
-    def save_location(self):
+    def __str__(self):
+        return self.group
+
+    def save_category(self):
         self.save()
 
 
