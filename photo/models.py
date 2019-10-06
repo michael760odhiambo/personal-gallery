@@ -2,11 +2,11 @@ from django.db import models
 
 class Location(models.Model):
     place = models.CharField(max_length=255)
-    address = models.CharField(max_length=40)
+    address = models.IntegerField()
     city = models.CharField(max_length=40)   
 
     def __str__(self):
-        return {self.place}
+        return self.place
 
     def save_location(self):
         self.save()
@@ -26,7 +26,7 @@ class Category(models.Model):
         ('celeb','Celebrity'),
         ('city','Cities')
     )
-    group = models.CharField(max_length=1, choices=PHOTO_CHOICE)
+    group = models.CharField(max_length=30, choices=PHOTO_CHOICE)
 
     def __str__(self):
         return self.group
@@ -36,7 +36,7 @@ class Category(models.Model):
 
 
 class Image(models.Model):
-    image = models.ImageField(upload_to='media/', default='media/image.jpg')
+    image = models.ImageField(upload_to='media/')
     name = models.CharField(max_length=40)
     description = models.TextField(max_length=500)
     post_date = models.DateTimeField(auto_now_add=True)
@@ -44,9 +44,10 @@ class Image(models.Model):
     category = models.ForeignKey(Category, default='')
 
     def __str__(self):
-        return {self.name}
+        return str(self.name)
 
     def save_image(self):
         self.save()
+
 
 # Create your models here.
