@@ -48,6 +48,9 @@ class Image(models.Model):
 
     def save_image(self):
         self.save()
+    def delete_image(self):
+        self.delete()
+            
     @classmethod
     def search_by_title(cls, search_term):
         photo = cls.objects.filter(name__icontains=search_term)

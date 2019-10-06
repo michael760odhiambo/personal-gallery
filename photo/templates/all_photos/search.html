@@ -18,11 +18,11 @@
     {% for picture in pictures %}
       <div class="col-sm-6 col-md-3">
           <h1>{{picture.name}}</h1>
-          <img src="{{picture.image.url}}" alt="" height="200px" width="200px">
+          <img src="{{picture.image.url}}" alt="" height="200px" width="280px">
           <p>{{picture.description}}</p>
-          <p>{{picture.post_date}}</p>
-          <p>{{picture.location}}</p>
-          <p>{{picture.category}}</p>
+          <p>published on:{{picture.post_date}}</p>
+          <p>location:{{picture.location}}</p>
+          <p>category:{{picture.category}}</p>
       </div>
     {% endfor %}
   {% endif %}
