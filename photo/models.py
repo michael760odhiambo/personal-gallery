@@ -48,9 +48,9 @@ class Image(models.Model):
 
     def save_image(self):
         self.save()
-    classmethod
+    @classmethod
     def search_by_title(cls, search_term):
-        photo = cls.objects.filter_by(title_icontains=search_term)
+        photo = cls.objects.filter(name__icontains=search_term)
         return photo
 
 # Create your models here.

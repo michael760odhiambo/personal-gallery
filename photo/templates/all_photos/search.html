@@ -1,6 +1,7 @@
-{%extends 'all-news/base.html'%} 
+{%extends 'all_photos/base.html'%} 
 {% block content %}
-<div class="container">
+
+
 
   <div class="row">
     {% if pictures%}
@@ -16,10 +17,15 @@
   {% if pictures %}
     {% for picture in pictures %}
       <div class="col-sm-6 col-md-3">
-          <h1>{{picture.title}}</h1>
+          <h1>{{picture.name}}</h1>
+          <img src="{{picture.image.url}}" alt="" height="200px" width="200px">
+          <p>{{picture.description}}</p>
+          <p>{{picture.post_date}}</p>
+          <p>{{picture.location}}</p>
+          <p>{{picture.category}}</p>
       </div>
     {% endfor %}
   {% endif %}
   </div>
-</div>
+
 {% endblock %}

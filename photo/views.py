@@ -31,15 +31,15 @@ def past_days_photos(request,past_date):
     photo = Image.days_photo(date)
     return render(request,'all_photos/past-day-photo.html', {'date':date,'photo':photo})             
     
-def search_results(request, search_term):
+def search_results(request):
     
     if 'pictures' in request.GET and request.GET["pictures"]:
         search_term = request.GET.get("pictures")
         searched_pictures = Image.search_by_title(search_term)
         message = f"{search_term}"
 
-        return render(request, 'all-news/search.html',{"message":message,"pictures": searched_pictures})
+        return render(request, 'all_photos/search.html',{"message":message,"pictures": searched_pictures})
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'all-news/search.html',{"message":message})   
+        return render(request, 'all_photos/search.html',{"message":message})   
