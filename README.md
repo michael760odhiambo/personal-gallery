@@ -4,7 +4,7 @@
 
 # Technologies used
 
-Flask
+* Flask
 
 Python
 
