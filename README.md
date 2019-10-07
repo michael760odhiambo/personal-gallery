@@ -1,8 +1,8 @@
 # Pics Gallery
 # Author
-# MICHAEL ODHIAMO 
+* MICHAEL ODHIAMO 
 
-Technologies used
+# Technologies used
 
 Flask
 
