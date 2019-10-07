@@ -1,6 +1,6 @@
 # Pics Gallery
-Author
-MICHAEL ODHIAMO
+# Author
+MICHAEL ODHIAMO -->
 
 Technologies used
 
