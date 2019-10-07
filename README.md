@@ -4,9 +4,9 @@
 
 # Technologies used
 
-* Flask
+* Django
 
-Python
+* Python
 
 Setup/Installation Instruction
 steps to follow
