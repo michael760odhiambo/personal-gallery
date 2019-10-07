@@ -31,7 +31,7 @@
 
 * $ Cloning into Spoon-Knife...
 
-$ remote: Counting objects: 10, done.
+* $ remote: Counting objects: 10, done.
 
 $ remote: Compressing objects: 100% (8/8), done.
 
