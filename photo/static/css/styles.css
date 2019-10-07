@@ -1,14 +1,31 @@
 h1{
-    color:red;
+    color:yellow;
 }
 
 .bg-image{
     background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/river-waterfall-pixabay.jpg');
-    height: 500px;
+    height: 550px;
     width: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
+    margin-top: 0%;
+}
+
+
+img {
+  padding: 50px;
+  
+  transition: transform .2s;
+  width: 300px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 }
 p{
     color:black;
@@ -59,10 +76,10 @@ h2{
   }
   
   /* The expanding image container */
-  .container {
+  /* .container {
     position: relative;
     display: none;
-  }
+  } */
   
   /* Expanding image text */
   #imgtext {

@@ -1,5 +1,6 @@
 {% load bootstrap3 %}
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +19,14 @@
 
 </head>
 <body>
+ 
 
-    {% include 'navbar.html' %}
-    {% block content %}  {%endblock%}
+    
+    {% block content %} 
+
+     {% include 'navbar.html' %}
+     
+    {%endblock%}
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

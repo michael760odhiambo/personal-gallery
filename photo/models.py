@@ -40,6 +40,7 @@ class Image(models.Model):
     name = models.CharField(max_length=40)
     description = models.TextField(max_length=500)
     post_date = models.DateTimeField(auto_now_add=True)
+    #link = models.CharField(max_length=200)
     location = models.ForeignKey(Location, default='')
     category = models.ForeignKey(Category, default='')
 
@@ -50,7 +51,7 @@ class Image(models.Model):
         self.save()
     def delete_image(self):
         self.delete()
-            
+
     @classmethod
     def search_by_title(cls, search_term):
         photo = cls.objects.filter(name__icontains=search_term)

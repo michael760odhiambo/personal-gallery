@@ -1,0 +1,29 @@
+
+{%extends 'all_photos/base.html'%}
+
+{% block content %}
+{{block.super}}
+
+   <div class="row">
+       <div class="col-md-4">
+            <a href="{% url 'home' %}"><img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Skyscrapers_of_Shinjuku_2009_January_%28revised%29.jpg" height="280px" width="350px"></a>
+            <a href="https://vancouver.ca/your-government/corporate-plan.aspx"><img src="https://vancouver.ca/images/cov/feature/corp-plan-downtown-landing-image.jpg" height="280px" width="350px"></a>
+            <a href="https://www.thenational.ae/lifestyle/travel/hot-pot-and-hip-hop-in-china-s-most-chilled-city-1.814703"><img src="https://www.thenational.ae/image/policy:1.814698:1547730673/Chengdu.jpg?f=16x9&w=1200&$p$f$w=ce786cc" height="280px" width="350px"></a>
+       </div>
+       <div class="col-md-4">
+            <a href="https://www.architecturaldigest.com/story/greenest-cities-in-america-are-models-for-cleaner-future"><img src="https://media.architecturaldigest.com/photos/58f918044f42bd463db36a3f/master/pass/1%20-%2010%20Greenest%20Cities%20in%20America%20in%202017.jpg" height="280px" width="350px"></a>
+            <a href="https://www.uber.com/global/en/cities/"><img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_956,h_537/cities/cities-overview-hero.png" height="280px" width="350px"></a>
+            <a href="https://www.lacity.org/blog/city-los-angeles-recognized-digital-government-experience-awards"><img src="https://www.lacity.org/sites/g/files/wph1196/f/styles/isotope_tiles_full_tile__680x410_/public/bigstock-Network-And-Connection-Technol-181380289_0.jpg?itok=KEzkzcmB" height="280px" width="350px"></a>
+           
+      </div>
+      <div class="col-md-4">
+            <a href="https://www.telegraph.co.uk/travel/news/hong-kong-most-expensive-city-in-world/"><img src="https://www.telegraph.co.uk/content/dam/Travel/2018/April/hong-kong-skyline.jpg?imwidth=450" height="280px" width="350px"></a>
+            <a href="https://www.city-journal.org/charter-cities"><img src="https://media4.manhattan-institute.org/sites/cj/files/charter-cities.jpg" height="280px" width="350px"></a>
+            <a href="https://www.fnlondon.com/articles/this-city-has-the-best-quality-of-life-according-to-deutsche-bank-20190521"><img src="https://si.wsj.net/public/resources/images/FN-AH184_FN_ZUR_P_20190521061548.jpg" height="280px" width="350px"></a>
+           
+     </div>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-warning">back</a>
+
+
+{% endblock %}

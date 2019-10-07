@@ -6,6 +6,28 @@ from .models import Image
 def home(request):
     return render(request,"all_photos/home.html")
 
+def land(request):
+    return render(request,"all_photos/land.html")
+
+def sun(request):
+    return render(request,"all_photos/sun.html")
+
+def morning(request):
+    return render(request,"all_photos/morning.html")
+
+
+def tree(request):
+    return render(request,"all_photos/tree.html")
+
+def ocean(request):
+    return render(request,"all_photos/ocean.html") 
+def city(request):
+    return render(request,"all_photos/city.html") 
+
+def celeb(request):
+    return render(request,"all_photos/celeb.html") 
+
+
 def photo_of_day(request):
     date = dt.date.today()
     photo = Image.objects.all()
